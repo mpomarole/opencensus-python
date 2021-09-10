@@ -41,6 +41,17 @@ for a complete reference.
         }
     }
 
+If you want to send Django traces in Google Cloud format.
+
+.. code:: python 
+
+    OPENCENSUS = {
+        'TRACE': {
+          'EXPORTER': 'opencensus.ext.stackdriver.trace_exporter.StackdriverExporter()',
+          'PROPAGATOR': 'opencensus.trace.propagation.google_cloud_format.GoogleCloudFormatPropagator()',
+        }
+    }
+
 References
 ----------
 
